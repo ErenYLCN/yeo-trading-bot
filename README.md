@@ -9,7 +9,9 @@ A trading bot leveraging AI to predict binance futures prices.
 
 ```
     pip install -r requirements.txt
-    // or
+```
+or
+```
     pip3 install -r requirements.txt
 ```
 
