@@ -1,3 +1,4 @@
 binance-futures-connector==1.8.0
 pandas==2.2.2
 ta==0.11.0
+python-dotenv==1.0.1
