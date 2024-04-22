@@ -5,9 +5,9 @@ import os
 from binance.um_futures import UMFutures
 from dotenv import load_dotenv
 
+from backtest.backtest import Backtest
 from util.basic import BasicUtility
 from util.candle import CandleUtility
-from util.helpers import p
 
 load_dotenv()
 
@@ -19,6 +19,5 @@ client = UMFutures(key=BINANCE_API_KEY, secret=BINANCE_SECRET_KEY)
 basicUtils = BasicUtility(client)
 candleUtils = CandleUtility(client)
 
-f = open("misc/candle.txt", "w")
-f.write(p(candleUtils.get_candles("BTCUSDT", "1m", 5)))
-f.close()
+backtestUtils = Backtest(client)
+backtestUtils.basic_backtest("BTCUSDT")
